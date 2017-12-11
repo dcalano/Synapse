@@ -1,0 +1,15 @@
+<resources>
+    <!-- Meta -->
+    <string name="app_name">Synapse</string>
+    <string name="preferences_file_name">synapsePrefs</string>
+    <string name="prefs_key_serializedClassification">serializedClassification</string>
+
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_license_activity">Licenses</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_search">Search</string>
+</resources>

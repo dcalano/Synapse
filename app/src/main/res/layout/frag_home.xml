@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/panel_search_options" />
+
+    <RelativeLayout
+        android:id="@+id/home_listFrame"
+        android:visibility="visible"
+        android:background="@color/md_white_1000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.doctoror.particlesdrawable.ParticlesView
+            android:id="@+id/home_particlesView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:minDotRadius="2dp"
+            app:maxDotRadius="6dp"
+            app:lineThickness="1dp"
+            app:lineDistance="150dp"
+            app:numDots="64"
+            app:dotColor="@color/googleBlue"
+            app:lineColor="@color/googleBlue"
+            app:frameDelayMillis="10"
+            app:stepMultiplier="1" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/home_swipeRefresher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+</LinearLayout>

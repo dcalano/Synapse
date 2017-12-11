@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/panel_search_options_root"
+    android:elevation="8dp"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="8dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:id="@+id/panel_search_options_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/search_panel_titleSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Subject"
+            android:textColor="@color/googleBlue"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            app:cardElevation="2dp"
+            app:contentPadding="4dp"
+            app:cardCornerRadius="4dp">
+
+            <Spinner
+                android:id="@+id/search_panel_spinner_subject"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/search_panel_titleCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Category"
+            android:textColor="@color/googleGreen"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            app:cardElevation="2dp"
+            app:contentPadding="4dp"
+            app:cardCornerRadius="4dp">
+
+            <Spinner
+                android:id="@+id/search_panel_spinner_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/search_panel_titleFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Filter"
+            android:textColor="@color/googleYellow"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            app:cardElevation="2dp"
+            app:contentPadding="4dp"
+            app:cardCornerRadius="4dp">
+
+            <Spinner
+                android:id="@+id/search_panel_spinner_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/search_panel_titleSorting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Sorting"
+            android:textColor="@color/googleRed"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardElevation="2dp"
+                app:contentPadding="4dp"
+                app:cardCornerRadius="4dp">
+
+                <Spinner
+                    android:id="@+id/search_panel_spinner_sortBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                app:cardElevation="2dp"
+                app:contentPadding="4dp"
+                app:cardCornerRadius="4dp">
+
+                <Spinner
+                    android:id="@+id/search_panel_spinner_sortOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

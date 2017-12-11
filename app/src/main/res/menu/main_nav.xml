@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Explore"
+        android:icon="@drawable/compass" />
+
+    <item
+        android:id="@+id/nav_bookmarks"
+        android:title="Bookmarks"
+        android:icon="@drawable/bookmark" />
+
+    <!--<item-->
+        <!--android:id="@+id/nav_settings"-->
+        <!--android:title="Settings"-->
+        <!--android:icon="@drawable/settings" />-->
+
+    <item
+        android:id="@+id/nav_about"
+        android:title="About"
+        android:icon="@drawable/info_outline" />
+</menu>

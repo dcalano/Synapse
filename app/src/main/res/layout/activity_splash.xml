@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary">
+
+    <com.doctoror.particlesdrawable.ParticlesView
+        android:id="@+id/splash_particle_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:minDotRadius="1dp"
+        app:maxDotRadius="3dp"
+        app:lineThickness="1dp"
+        app:lineDistance="86dp"
+        app:numDots="64"
+        app:dotColor="@android:color/white"
+        app:lineColor="@android:color/white"
+        app:frameDelayMillis="10"
+        app:stepMultiplier="1" />
+
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/neuron_brain"/>
+
+    <ProgressBar
+        android:id="@+id/splash_progress"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/splash_logo"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="24dp"
+        android:progressBackgroundTint="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/splash_infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/splash_progress"
+        android:maxLines="2"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        tools:text="Loading resources..."/>
+</RelativeLayout>

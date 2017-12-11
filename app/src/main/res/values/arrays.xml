@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="drawer_nav_titles">
+        <item>Home</item>
+        <item>Subscriptions</item>
+        <item>Settings</item>
+        <item>About</item>
+        <item>Exit</item>
+    </string-array>
+
+    <string-array name="array_filters_titles">
+        <item>No Filter</item>
+        <item>Title</item>
+        <item>Author</item>
+        <item>Abstract</item>
+    </string-array>
+    <string-array name="array_filters_keys">
+        <item>all</item>
+        <item>ti</item>
+        <item>au</item>
+        <item>abs</item>
+    </string-array>
+
+    <string-array name="array_sort_by_titles">
+        <item>Relevance</item>
+        <item>Last Updated</item>
+        <item>Date Submitted</item>
+    </string-array>
+    <string-array name="array_sort_by_keys">
+        <item>relevance</item>
+        <item>lastUpdatedDate</item>
+        <item>submittedDate</item>
+    </string-array>
+
+    <string-array name="array_sort_order_titles">
+        <item>Descending</item>
+        <item>Ascending</item>
+    </string-array>
+    <string-array name="array_sort_order_keys">
+        <item>descending</item>
+        <item>ascending</item>
+    </string-array>
+</resources>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context=".ui.activities.EntryDetailActivity"
+    tools:showIn=".ui.activities.EntryDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/entry_detail_updated_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentPaddingTop="32dp"
+            app:contentPaddingBottom="16dp"
+            app:contentPaddingLeft="16dp"
+            app:contentPaddingRight="16dp"
+            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/entry_detail_meta_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/googleBlue"
+                    android:layout_marginBottom="16dp"
+                    tools:text="@tools:sample/lorem/random" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Published:" />
+
+                <TextView
+                    android:id="@+id/entry_detail_publishedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:text="01-01-2000"/>
+
+                <TextView
+                    android:id="@+id/entry_detail_updatedFlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:text="Last Updated:" />
+
+                <TextView
+                    android:id="@+id/entry_detail_updatedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    tools:text="01-01-2000"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/entry_detail_authors_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentPadding="16dp"
+            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Authors"
+                    android:textStyle="bold"
+                    android:textColor="@color/googleGreen"
+                    android:layout_marginBottom="8dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/entry_detail_authors_list"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/entry_detail_classifications_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentPadding="16dp"
+            app:cardCornerRadius="4dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Classifications"
+                    android:textStyle="bold"
+                    android:textColor="@color/googleYellow"
+                    android:layout_marginBottom="8dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/entry_detail_classifications_list"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

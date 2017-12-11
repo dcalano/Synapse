@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="xyz.imaginatrix.synapse">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".Synapse"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_circle"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".ui.activities.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"/>
+
+        <activity android:name=".ui.activities.WebActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" />
+
+        <activity android:name=".ui.activities.EntryDetailActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="http"
+                    android:host="arxiv.org"
+                    android:pathPrefix="/abs"/>
+                <data
+                    android:scheme="https"
+                    android:host="arxiv.org"
+                    android:pathPrefix="/abs"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.LicenseActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.MaterialAboutActivity.Light.DarkActionBar">
+        </activity>
+    </application>
+</manifest>
