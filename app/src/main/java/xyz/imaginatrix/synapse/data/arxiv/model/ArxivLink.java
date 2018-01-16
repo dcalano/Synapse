@@ -1,4 +1,4 @@
-package xyz.imaginatrix.synapse.arxiv.rest.model;
+package xyz.imaginatrix.synapse.data.arxiv.model;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Root;

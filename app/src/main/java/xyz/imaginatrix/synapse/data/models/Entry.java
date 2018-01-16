@@ -63,13 +63,9 @@ public class Entry extends RealmObject implements Parcelable {
     public void setDoiUrl(String doiUrl) { this.doiUrl = doiUrl; }
 
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
+    @Override public int describeContents() { return 0; }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
+    @Override public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.idUrl);
         dest.writeString(this.publishedDate);
         dest.writeString(this.updatedDate);
@@ -102,14 +98,7 @@ public class Entry extends RealmObject implements Parcelable {
     }
 
     public static final Creator<Entry> CREATOR = new Creator<Entry>() {
-        @Override
-        public Entry createFromParcel(Parcel source) {
-            return new Entry(source);
-        }
-
-        @Override
-        public Entry[] newArray(int size) {
-            return new Entry[size];
-        }
+        @Override public Entry createFromParcel(Parcel source) { return new Entry(source); }
+        @Override public Entry[] newArray(int size) { return new Entry[size]; }
     };
 }

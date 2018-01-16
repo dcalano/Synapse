@@ -44,10 +44,10 @@ import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmResults;
 import xyz.imaginatrix.synapse.R;
-import xyz.imaginatrix.synapse.arxiv.rest.ArxivClient;
-import xyz.imaginatrix.synapse.arxiv.rest.model.ArxivEntry;
-import xyz.imaginatrix.synapse.arxiv.rest.model.SearchResult;
-import xyz.imaginatrix.synapse.arxiv.rest.service.ArxivService;
+import xyz.imaginatrix.synapse.data.arxiv.ArxivAPI;
+import xyz.imaginatrix.synapse.data.arxiv.ArxivClient;
+import xyz.imaginatrix.synapse.data.arxiv.model.ArxivEntry;
+import xyz.imaginatrix.synapse.data.arxiv.model.SearchResult;
 import xyz.imaginatrix.synapse.data.models.Category;
 import xyz.imaginatrix.synapse.data.models.Classification;
 import xyz.imaginatrix.synapse.data.models.Entry;
@@ -394,7 +394,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemSelected
 
         isLoading = true;
         swipeRefreshLayout.setRefreshing(true);
-        ArxivService api = ArxivClient.createService(ArxivService.class);
+        ArxivAPI api = ArxivClient.createService(ArxivAPI.class);
         disposables.add(api.query(searchQuery.getQuery(),
                 searchQuery.getCurrentStartIndex(),
                 MAX_SEARCH_RESULTS,

@@ -1,4 +1,4 @@
-package xyz.imaginatrix.synapse.arxiv.rest;
+package xyz.imaginatrix.synapse.data.arxiv;
 
 
 import okhttp3.OkHttpClient;

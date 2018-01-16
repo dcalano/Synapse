@@ -1,7 +1,9 @@
 package xyz.imaginatrix.synapse.ui.fragments;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -55,13 +57,13 @@ public class EntryDocumentFragment extends Fragment {
         }
     }
 
-    @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    @Override public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View fragView = inflater.inflate(R.layout.frag_entry_detail_document, container, false);
         ButterKnife.bind(this, fragView);
         return fragView;
     }
 
-    @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         title.setText(entry.getTitle());
@@ -102,7 +104,7 @@ public class EntryDocumentFragment extends Fragment {
         }
     }
 
-    @Override public void onSaveInstanceState(Bundle outState) {
+    @Override public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelable(ARG_ENTRY, entry);
     }
@@ -116,20 +118,23 @@ public class EntryDocumentFragment extends Fragment {
 
     @OnClick(R.id.entry_detail_webLink)
     void webLinkClicked() {
-        if (entry == null)
-            return;
+        if (entry == null) return;
         startActivity(WebActivity.createIntent(getActivity(), entry.getWebUrl()));
     }
 
     @OnClick(R.id.entry_detail_pdfLink)
     void pdfLinkClicked() {
-        if (entry == null)
-            return;
+        if (entry == null) return;
 
-        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        shareIntent.setType("application/pdf");
-        shareIntent.putExtra(Intent.EXTRA_TEXT, entry.getPdfUrl());
-        startActivity(Intent.createChooser(shareIntent, "Open paper with..."));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW);
+        browserIntent.setDataAndType(Uri.parse(entry.getPdfUrl()), "application/pdf");
+        Intent chooser = Intent.createChooser(browserIntent, "Open PDF");
+        chooser.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(chooser);
+//        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+//        shareIntent.setType("application/pdf");
+//        shareIntent.putExtra(Intent.EXTRA_TEXT, entry.getPdfUrl());
+//        startActivity(Intent.createChooser(shareIntent, "Open paper with..."));
     }
 
     @OnClick(R.id.entry_detail_doiLink)

@@ -13,11 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
-import com.crashlytics.android.Crashlytics;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.fabric.sdk.android.Fabric;
 import xyz.imaginatrix.synapse.R;
 import xyz.imaginatrix.synapse.ui.fragments.AboutFragment;
 import xyz.imaginatrix.synapse.ui.fragments.BookmarksFragment;
@@ -28,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     private static final int NAV_HOME = 0;
     private static final int NAV_BOOKMARKS = 1;
-//    private static final int NAV_SETTINGS = 2;
     private static final int NAV_ABOUT = 2;
 
     @BindView(R.id.main_appbar) AppBarLayout appBarLayout;
@@ -38,9 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Meta / Analytics
-        Fabric.with(this, new Crashlytics());
 
         // View
         setContentView(R.layout.activity_main);

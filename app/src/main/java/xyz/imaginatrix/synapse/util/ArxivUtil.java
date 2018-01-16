@@ -5,11 +5,11 @@ import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmList;
-import xyz.imaginatrix.synapse.arxiv.rest.model.ArxivAffiliation;
-import xyz.imaginatrix.synapse.arxiv.rest.model.ArxivAuthor;
-import xyz.imaginatrix.synapse.arxiv.rest.model.ArxivCategory;
-import xyz.imaginatrix.synapse.arxiv.rest.model.ArxivEntry;
-import xyz.imaginatrix.synapse.arxiv.rest.model.ArxivLink;
+import xyz.imaginatrix.synapse.data.arxiv.model.ArxivAffiliation;
+import xyz.imaginatrix.synapse.data.arxiv.model.ArxivAuthor;
+import xyz.imaginatrix.synapse.data.arxiv.model.ArxivCategory;
+import xyz.imaginatrix.synapse.data.arxiv.model.ArxivEntry;
+import xyz.imaginatrix.synapse.data.arxiv.model.ArxivLink;
 import xyz.imaginatrix.synapse.data.models.Author;
 import xyz.imaginatrix.synapse.data.models.Category;
 import xyz.imaginatrix.synapse.data.models.Classification;

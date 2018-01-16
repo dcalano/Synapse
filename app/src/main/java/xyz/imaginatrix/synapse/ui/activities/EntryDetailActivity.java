@@ -31,9 +31,9 @@ import io.reactivex.schedulers.Schedulers;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import xyz.imaginatrix.synapse.R;
-import xyz.imaginatrix.synapse.arxiv.rest.ArxivClient;
-import xyz.imaginatrix.synapse.arxiv.rest.model.SearchResult;
-import xyz.imaginatrix.synapse.arxiv.rest.service.ArxivService;
+import xyz.imaginatrix.synapse.data.arxiv.ArxivAPI;
+import xyz.imaginatrix.synapse.data.arxiv.ArxivClient;
+import xyz.imaginatrix.synapse.data.arxiv.model.SearchResult;
 import xyz.imaginatrix.synapse.data.models.Entry;
 import xyz.imaginatrix.synapse.ui.fragments.EntryDocumentFragment;
 import xyz.imaginatrix.synapse.ui.fragments.EntryMetaFragment;
@@ -83,7 +83,7 @@ public class EntryDetailActivity extends AppCompatActivity {
                 String entryId = params.get(1);
 
                 // Retrieve entry object from API
-                ArxivService arxivApi = ArxivClient.createService(ArxivService.class);
+                ArxivAPI arxivApi = ArxivClient.createService(ArxivAPI.class);
                 disposables.add(
                         arxivApi.getEntry(entryId)
                                 .subscribeOn(Schedulers.io())
