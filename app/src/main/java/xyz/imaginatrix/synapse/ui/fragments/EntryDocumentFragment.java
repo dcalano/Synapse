@@ -131,10 +131,6 @@ public class EntryDocumentFragment extends Fragment {
         Intent chooser = Intent.createChooser(browserIntent, "Open PDF");
         chooser.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(chooser);
-//        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-//        shareIntent.setType("application/pdf");
-//        shareIntent.putExtra(Intent.EXTRA_TEXT, entry.getPdfUrl());
-//        startActivity(Intent.createChooser(shareIntent, "Open paper with..."));
     }
 
     @OnClick(R.id.entry_detail_doiLink)
